@@ -1,0 +1,11 @@
+<div class="players" *mobxAutorun>
+  Players list: ({{store.playersCount}}) 
+  <button *ngIf="!store.enablePlayerEdit" (click)="toggleEdit()">Add player</button>
+  <ul *ngIf="!store.enablePlayerEdit">
+    <li *ngFor="let player of store.players">
+      {{player.name}}, {{player.age}}
+      <button (click)="player.remove()">X</button>
+    </li>
+  </ul>
+  <app-add-player *ngIf="store.enablePlayerEdit"></app-add-player>
+</div>
