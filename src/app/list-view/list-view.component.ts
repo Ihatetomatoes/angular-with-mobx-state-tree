@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { store } from "../../models/store"
+import { store } from '../../models/store';
 
 @Component({
   selector: 'app-list-view',
@@ -8,15 +8,12 @@ import { store } from "../../models/store"
 })
 export class ListViewComponent implements OnInit {
   store = store;
-  
-  constructor() { 
-  }
 
-  ngOnInit() {
-  }
+  constructor() {}
 
-  toggleEdit(){
+  ngOnInit() {}
+
+  toggleEdit() {
     this.store.togglePlayerEdit();
   }
-
 }

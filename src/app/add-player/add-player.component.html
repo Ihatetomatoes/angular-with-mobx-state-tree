@@ -1,9 +1,11 @@
 <div class="add-player-form">
   <form (submit)="handleSubmit($event)">
     <label for="name">Name</label>
-    <input id="name" name="name" ng-model="player.name" /><br />
+    <input id="name" name="name" ng-model="player.name" />
+    <br />
     <label for="age">Age</label>
-    <input type="number" name="age" ng-model="player.age" /><br />
+    <input type="number" name="age" ng-model="player.age" />
+    <br />
     <button type="submit">Submit</button>
     <button *ngIf="store.enablePlayerEdit" (click)="store.togglePlayerEdit()">Cancel</button>
   </form>
